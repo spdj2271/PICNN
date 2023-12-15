@@ -1,6 +1,6 @@
 # PICNN
 ## About
-This repository is the official PyTorch implementation of "PICNN: A Pathway towards Interpretable Convolutional Neural Networks", Wengang Guo$^*$, Jiayi Yang$^*$,, Huilin Yin, Qijun Chen, Wei Ye, AAAI 2024.
+This repository is the official PyTorch implementation of "PICNN: A Pathway towards Interpretable Convolutional Neural Networks", Wengang Guo $^\*$, Jiayi Yang $^\*$, Huilin Yin, Qijun Chen, Wei Ye, AAAI 2024.
 ## Experiment
 * Apply the python environment:
   
