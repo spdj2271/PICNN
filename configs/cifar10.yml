@@ -1,0 +1,49 @@
+# Setup
+setup: simclr
+
+# Model
+#backbone: resnet18
+model_kwargs:
+  features_dim: 64
+# Loss
+#criterion: ClassSpecificCE
+#criterion: StandardCE
+criterion_kwargs:
+  lambda_weight: 2
+
+# Dataset
+db_name: cifar-10
+num_classes: 10
+
+# Hyperparameters
+epochs: 200
+
+optimizer: adam
+optimizer_kwargs:
+  lr: 0.001
+  weight_decay: 0.0001
+
+scheduler: cosine
+scheduler_kwargs:
+  lr_decay_rate: 0.1
+batch_size: 128
+num_workers: 48
+
+# Transformations
+augmentation_strategy: standard
+augmentation_kwargs:
+  random_resized_crop:
+    size: 224
+    scale: [ 0.2, 1.0 ]
+  color_jitter_random_apply:
+    p: 0.8
+  color_jitter:
+    brightness: 0.4
+    contrast: 0.4
+    saturation: 0.4
+    hue: 0.1
+  random_grayscale:
+    p: 0.2
+
+
+
