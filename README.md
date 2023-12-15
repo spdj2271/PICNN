@@ -10,19 +10,18 @@ This repository is the official PyTorch implementation of "PICNN: A Pathway towa
   ./requirements.sh
   ```
   
-* Run the experiment:
+* Conduct the experiment:
 
-  Type
+Standard CNNs (STD) using ResNet as the backbone:
   ```bash
   python main.py -configFileName='./configs/cifar10.yml' -backbone='resnet18' -criterion='StandardCE'
   ```
-  for standard CNNs (STD) using ResNet as the backbone.
 
-  Type
+PICNN:
   ```bash
   python main.py -configFileName='./configs/cifar10.yml' -backbone='resnet18' -criterion='ClassSpecificCE'
   ```
-  for PICNN.
+
 
 
   
