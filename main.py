@@ -21,7 +21,7 @@ def main():
     seed_torch(0)
     cmd_opt = argparse.ArgumentParser(description='Argparser for PICNN')
     cmd_opt.add_argument('-configFileName', default='./configs/cifar10.yml')
-    cmd_opt.add_argument('-criterion', default='StandardCE',help='StandardCE/ClassSpecificCE')
+    cmd_opt.add_argument('-criterion', default='ClassSpecificCE',help='StandardCE/ClassSpecificCE')
     cmd_opt.add_argument('-backbone', default='resnet18',help='resnet18')
     cmd_args, _ = cmd_opt.parse_known_args()
     
