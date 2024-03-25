@@ -1,6 +1,3 @@
-# Setup
-setup: simclr
-
 # Model
 #backbone: resnet18
 model_kwargs:
