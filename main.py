@@ -124,10 +124,10 @@ def main():
             logging.info('Best Checkpoint ...')
             torch.save({'optimizer': optimizer.state_dict(), 'model': model.state_dict(), 'epoch': epoch + 1},
                    p['best_checkpoint'])
-        writer.add_scalar(tag='model/ACC1', scalar_value=best_stats['ACC1'], global_step=epoch)
-        writer.add_scalar(tag='model/ACC2', scalar_value=best_stats['ACC2'], global_step=epoch)
-        writer.add_scalar(tag='model/ACC3', scalar_value=best_stats['ACC3'], global_step=epoch)
-        writer.add_scalar(tag='model/MIS', scalar_value=best_stats['MIS'], global_step=epoch)
+        writer.add_scalar(tag='model/ACC1', scalar_value=eval_stats['ACC1'], global_step=epoch)
+        writer.add_scalar(tag='model/ACC2', scalar_value=eval_stats['ACC2'], global_step=epoch)
+        writer.add_scalar(tag='model/ACC3', scalar_value=eval_stats['ACC3'], global_step=epoch)
+        writer.add_scalar(tag='model/MIS', scalar_value=eval_stats['MIS'], global_step=epoch)
         writer.flush()
 
         # Checkpoint
